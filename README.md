@@ -700,7 +700,7 @@ In simple words, If the previous value of the state or props and the new value o
 
     **[⬆ Back to Top](#table-of-contents)**
 
-10.  ### What is state in React?
+  9.  ### What is state in React?
 
     _State_ of a component is an object that holds some information that may change over the lifetime of the component. The important point is whenever the state object changes, the component re-renders. It is always recommended to make our state as simple as possible and minimize the number of stateful components.
 
@@ -755,7 +755,7 @@ In simple words, If the previous value of the state or props and the new value o
 
     **[⬆ Back to Top](#table-of-contents)**
 
-11. ### What are props in React?
+10. ### What are props in React?
 
     _Props_ are inputs to components. They are single values or objects containing a set of values that are passed to components on creation similar to HTML-tag attributes. Here, the data is passed down from a parent component to a child component.
 
