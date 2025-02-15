@@ -1851,9 +1851,10 @@ class ParentComponent extends React.Component {
 
 57. ### How to loop inside JSX?
 
-    You can simply use `Array.prototype.map` with ES6 _arrow function_ syntax.
+   JSX is HTML-like or XML-like syntax. JSX stands for JavaScript XML. It's a syntax extension for JavaScript. JSX stands for JavaScriptXML. It allows you to write HTML elements in JavaScript and place them into the DOM without any createElement() and appendChild() methods .
+  It is not a part of React. React apps can be built even without JSX but the code will become very hard to read. It is not HTML inside JavaScript.
+JavaScript engine cannot understand JSX as it only understands ECMAScript
 
-    For example, the `items` array of objects is mapped into an array of components:
 
     ```jsx harmony
     <tbody>
