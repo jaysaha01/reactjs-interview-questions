@@ -488,11 +488,10 @@ Emmet is the essential toolkit for web-developers. It allows you to type shortcu
 
 4.  ### What is JSX?
 
-    _JSX_ stands for _JavaScript XML_ and it is an XML-like syntax extension to ECMAScript. Basically it just provides the syntactic sugar for the `React.createElement(type, props, ...children)` function, giving us expressiveness of JavaScript along with HTML like template syntax.
+   JSX is HTML-like or XML-like syntax. JSX stands for JavaScript XML. It's a syntax extension for JavaScript. JSX stands for JavaScriptXML. It allows you to write HTML elements in JavaScript and place them into the DOM without any createElement() and appendChild() methods .
+  It is not a part of React. React apps can be built even without JSX but the code will become very hard to read. It is not HTML inside JavaScript.
+JavaScript engine cannot understand JSX as it only understands ECMAScript
 
-    In the example below, the text inside `<h1>` tag is returned as JavaScript function to the render function.
-
-    ```jsx harmony
     export default function App() {
       return <h1 className="greeting">{"Hello, this is a JSX Code!"}</h1>;
     }
