@@ -439,9 +439,26 @@ Hide/Show table of contents
 
 1.  ### What is React?
 
-    React (aka React.js or ReactJS) is an **open-source front-end JavaScript library** that is used for building composable user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps based on components in a declarative approach.
+React is a JavaScript library used for building user interfaces (UIs) and single page applications. Created by Jordan walker at Facebook. Most popular library for frontend development. 
+React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
 
-    React was created by [Jordan Walke](https://github.com/jordwalke), a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+
+1.2) What is Library?
+
+Library is a collections of prewritten code snippets that can be used and reused to perform certain tasks. A particular JavaScript library code can be plugged into application code which leads to faster development and fewer vulnerabilities to have errors. Examples: React, jQuery
+
+
+1.3) What is Framework?
+Framework provides a basic foundation or structure for a website or an application. Examples: Angular
+
+1.4) Similarities between Library and Framework?
+Frameworks and libraries are code written by third parties to solve regular/common problems or to optimise performance.
+
+1.5) Difference between Library and Framework?
+A key difference between the two is Inversion of control. When using a library, the control remains with the developer who tells the application when to call library functions. When using a framework, the control is reversed, which means that the framework tells the developer where code needs to be provided and calls it as it requires.
+
+Emmet:
+Emmet is the essential toolkit for web-developers. It allows you to type shortcuts that are then expanded into full-fledged boiler plate code for writing HTML and CSS. 
 
     **[⬆ Back to Top](#table-of-contents)**
 
