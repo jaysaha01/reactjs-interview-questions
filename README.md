@@ -1004,7 +1004,15 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
 19. ### What is React Fiber?
 
-    Fiber is the new _reconciliation_ engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+Fiber is the new _reconciliation_ engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+    
+
+At the core lies React-Fiber - a powerhouse reimplementation of React's algorithm. The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+These days, we can use JavaScript and React alongside popular libraries like GSAP (GreenSock Animation Platform) and Three.js. 
+These tools allow us to create animations and 3D designs using the capabilities of JavaScript and React.
+
+But how does it all work behind the scenes? 
+When you create elements in React, you're actually creating virtual DOM objects. These virtual replicas are synced with the real DOM, a process known as "Reconciliation" or the React 
 
     virtual dom ko update karna ka algoridom ka nam he Fiber. 
 
@@ -1012,7 +1020,7 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
 21. ### What is the main goal of React Fiber?
 
-    The goal of _React Fiber_ is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
+The goal of _React Fiber_ is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
 
     _from documentation_
 
@@ -1028,16 +1036,11 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
 22. ### What are controlled components?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function. That means, the displayed data is always in sync with the state of the component.
+Controlled components in React are those where form data is handled by React component state. means
 
-    The controlled components will be implemented using the below steps,
-
-    1. Initialize the state using `useState` hooks in function components or inside constructor for class components.
-    2. Set the value of the form element to the respective state variable.
-    3. Create an event handler to handle the user input changes through useState updater function or setState from class component.
-    4. Attach the above event handler to form elements change or click events
-
-    For example, the name input field updates the user name using `handleChange` event handler as below,
+ 🔴 State Management: The value of the input field is controlled by React state (useState or this. state in class components).
+ 🔴 Event Handlers: Changes to the input field (like typing into a text field) are handled by React event handlers (onChange, onBlur, etc.).
+ 🔴 State Updates: When the user interacts with the form input, React state is updated the event handlers, and the input value reflects the current state value.
 
     ```javascript
     import React, { useState } from "react";
@@ -1064,15 +1067,14 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
 23. ### What are uncontrolled components?
 
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a `ref` to find its current value when you need it. This is a bit more like traditional HTML.
+  Uncontrolled components in React are those where form data is handled by the DOM itself.
+This means:
 
-    The uncontrolled components will be implemented using the below steps,
+   `The uncontrolled components will be implemented using the below steps,`
 
-    1. Create a ref using `useRef` react hook in function component or `React.createRef()` in class based component.
-    2. Attach this `ref` to the form element.
-    3. The form element value can be accessed directly through `ref` in event handlers or `componentDidMount` for class components
-
-    In the below UserProfile component, the `username` input is accessed using ref.
+🔴 Direct DOM Manipulation: The value of the input field is controlled by the DOM (document.getElementByld, etc.). It's not a declarative way right.
+🔴 Event Handling: Changes are directly handled by DOM events (onchange, onblur, etc.).
+🔴 Accessing Form Data: Form data is accessed through refs or DOM traversal methods, not through React state.
 
     ```jsx harmony
     import React, { useRef } from "react";
@@ -1142,15 +1144,16 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
 25. ### What is Lifting State Up in React?
 
-    When several components need to share the same changing data then it is recommended to _lift the shared state up_ to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+ Lifting state up in React refers to the practice of moving the state from a lower-level (child) component to a higher-level (parent or common ancestor) component in the component tree . This is done to share and manage state across multiple components.
+When a child component needs access to certain data or needs to modify the data, instead of keeping that data and the corresponding state management solely within the child component, we move the state to a shared ancestor component. By doing so, the parent component becomes the source of truth for the state, and it can pass down the necessary data and functions as props to its child components.
+
+
 
     **[⬆ Back to Top](#table-of-contents)**
 
 26. ### What are Higher-Order Components?
 
-    A _higher-order component_ (_HOC_) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
-
-    We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+    Higher-order components or HOC is the advanced method of reusing the component functionality logic. It simply takes the original component and returns the enhanced component.
 
     ```javascript
     const EnhancedComponent = higherOrderComponent(WrappedComponent);
@@ -1165,7 +1168,7 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
     **[⬆ Back to Top](#table-of-contents)**
 
-27. ### What is children prop?
+27. ### ❌ What is children prop?
 
     _Children_ is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
 
@@ -1243,9 +1246,7 @@ createRoot create karahehe vertual dom qk ya real dom and apni dom ko compare ka
 
 29. ### What is reconciliation?
 
-    `Reconciliation` is the process through which React updates the Browser DOM and makes React work faster. React use a `diffing algorithm` so that component updates are predictable and faster. React would first calculate the difference between the `real DOM` and the copy of DOM `(Virtual DOM)` when there's an update of components.
-    React stores a copy of Browser DOM which is called `Virtual DOM`. When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one. This comparison is done by `Diffing Algorithm`.
-    Now React compares the Virtual DOM with Real DOM. It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called _Reconciliation_.
+  React `Reconciliation` is the process through which React updates the Browser DOM. It makes the DOM updates faster in React. It updates the virtual DOM first and then uses the diffing algorithm to make efficient and optimized updates in the Real DOM.
 
     **[⬆ Back to Top](#table-of-contents)**
 
