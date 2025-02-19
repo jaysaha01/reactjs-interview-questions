@@ -1700,7 +1700,7 @@ When a child component needs access to certain data or needs to modify the data,
 
     **[⬆ Back to Top](#table-of-contents)**
 
-50. ### How you implement Server Side Rendering or SSR?
+50.`❌` ### How you implement Server Side Rendering or SSR?
 
     React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
 
@@ -1715,19 +1715,19 @@ When a child component needs access to certain data or needs to modify the data,
 
     **[⬆ Back to Top](#table-of-contents)**
 
-51. ### How to enable production mode in React?
+51..`❌` ### How to enable production mode in React?
 
     You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-52. ### Do Hooks replace render props and higher order components?
+52. ### Do Hooks replace render props and higher order components? .`❌`
 
     Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-53. ### What is a switching component?
+53. ### What is a switching component? .`❌`
 
     A _switching component_ is a component that renders one of many components. We need to use object to map prop values to components.
 
@@ -1760,7 +1760,7 @@ When a child component needs access to certain data or needs to modify the data,
 
     **[⬆ Back to Top](#table-of-contents)**
 
-54. ### What are React Mixins?
+54. ### What are React Mixins? .`❌`
 
     _Mixins_ are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with _higher-order components_ or _decorators_.
 
@@ -1779,7 +1779,7 @@ When a child component needs access to certain data or needs to modify the data,
 
     **[⬆ Back to Top](#table-of-contents)**
 
-55. ### What are the Pointer Events supported in React?
+55. ### What are the Pointer Events supported in React? .`❌`
 
     _Pointer Events_ provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the _Pointer Events_ specification.
 
@@ -1798,7 +1798,7 @@ When a child component needs access to certain data or needs to modify the data,
 
     **[⬆ Back to Top](#table-of-contents)**
 
-56. ### Why should component names start with capital letter?
+56. ### Why should component names start with capital letter? `❌`
 
     If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as an unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
 
@@ -1905,7 +1905,7 @@ JavaScript engine cannot understand JSX as it only understands ECMAScript
 
     **[⬆ Back to Top](#table-of-contents)**
 
-59. ### What is React proptype array with shape?
+59. ### What is React proptype array with shape? `❌`
 
     If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
 
@@ -1922,7 +1922,7 @@ JavaScript engine cannot understand JSX as it only understands ECMAScript
 
     **[⬆ Back to Top](#table-of-contents)**
 
-60. ### How to conditionally apply class attributes?
+60. ### How to conditionally apply class attributes? `❌`
 
     You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
@@ -2172,16 +2172,8 @@ JavaScript engine cannot understand JSX as it only understands ECMAScript
 
 69. ### How can we find the version of React at runtime in the browser?
 
-    You can use `React.version` to get the version.
-
-    ```jsx harmony
-    const REACT_VERSION = React.version;
-
-    ReactDOM.render(
-      <div>{`React version: ${REACT_VERSION}`}</div>,
-      document.getElementById("app")
-    );
-    ```
+    https://www.geeksforgeeks.org/how-to-check-the-version-of-reactjs/
+    
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2198,7 +2190,7 @@ JavaScript engine cannot understand JSX as it only understands ECMAScript
 
 **[⬆ Back to Top](#table-of-contents)**
 
-71. ### How do you apply vendor prefixes to inline styles in React?
+71. ### How do you apply vendor prefixes to inline styles in React?  `❌`
 
     React _does not_ apply _vendor prefixes_ automatically. You need to add vendor prefixes manually.
 
@@ -2247,7 +2239,7 @@ JavaScript engine cannot understand JSX as it only understands ECMAScript
 
 **[⬆ Back to Top](#table-of-contents)**
 
-73. ### What are the exceptions on React component naming?
+73. ### What are the exceptions on React component naming? `❌`
 
     The component names should start with an uppercase letter but there are few exceptions to this convention. The lowercase tag names with a dot (property accessors) are still considered as valid component names.
     For example, the below tag can be compiled to a valid component,
@@ -2321,13 +2313,13 @@ JavaScript engine cannot understand JSX as it only understands ECMAScript
 
 **[⬆ Back to Top](#table-of-contents)**
 
-76. ### What are the popular packages for animation?
+76. ### What are the popular packages for animation? 
 
     _React Transition Group_ and _React Motion_ are popular animation packages in React ecosystem.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-77. ### What is the benefit of styles modules?
+77. ### What is the benefit of styles modules? `❌`
 
     It is recommended to avoid hard coding style values in components. Any values that are likely to be used across different UI components should be extracted into their own modules.
 
