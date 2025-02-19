@@ -460,6 +460,66 @@ A key difference between the two is Inversion of control. When using a library, 
 Emmet:
 Emmet is the essential toolkit for web-developers. It allows you to type shortcuts that are then expanded into full-fledged boiler plate code for writing HTML and CSS. 
 
+1.6) Why react is a library? 
+React is only render inside div id root and other poursion of html works the same so for that reason react is a library.
+React can be applied of your small poursion of your page itself. react working only header or footer also. this is why react is a library because it works independently a small poursion of your app as well.  
+
+
+* Cross Origin:
+The crossorigin attribute in the script tag enables CrossOrigin Resource Sharing (CORS) for loading external JavaScript files from different origin than the hosting web page. This allows the script to access resources from the server hosting the script, such as making HTTP requests or accessing data.
+
+1.7)  What is difference between package.json and package-lock.json?
+  In package.json we have information about generic version of installed packages whereas in package-lock.json we have information about the specific or exact version of installed packages.
+
+  1.8) What are the differences between JSX and HTML?
+  JSX and HTML differ in their integration and usage within web development. HTML is a standard markup language for creating static web pages, while JSX is a syntax extension for JavaScript, mainly used with React, allowing HTML-like code within JavaScript. Additionally, JSX uses camelCase for attributes and supports embedding JavaScript expressions directly in the markup.
+
+  Introduction to HTML
+HTML is a Hypertext Markup Language, the standard markup language for documents designed to be displayed and viewed on the web in a web browser.
+
+Introduction to JSX
+JSX (JavaScript + XML) is an extension of JavaScript that permits you to write down HTML directly within JavaScript, which features a few benefits of creating your code more readable and exercising the complete power of JavaScript within HTML. JSX is in some ways almost like HTML, however, it does accompany certain conspicuous differences which we’ll cover within the next section. Since JSX isn’t a legitimate JS code, it must be compiled into JS with a tool like Babel or similar.
+
+
+Q) What will happen if we call 2 elements inside each other?
+If we put 2 components inside each other, then it will go into an infinite loop and the stack will overflow. It will freeze your browser, so it’s not recommended to do so. 
+
+Q) What is Hook?
+It's simply a regular JavaScript function. However, it becomes powerful when used within React, as it's provided to us by React itself. These pre-built functions have underlying logic developed by React developers. When we install React via npm, we gain access to these superpowers. Two crucial hooks we frequently utilize are:
+1.	useState()
+2.	useEffect()
+
+
+Q) When will the call back function get called inside the useEffect()?
+Call-back function is getting called after the whole component get rendered.
+In our app we are using ’useEffect() ' inside Body component. So it will get called once Body component complete its render cycle.
+If we have to do something after the rendercycle complets we can pass it inside the ‘useEffect()' . this is the actual use case of useEffect. It is really helpful to render data which we will get after the ‘fetch() ' operation and we are going to follow second approach which we have discussed already. 
+
+Q) Where we fetch the data?
+ inside the ‘
+useEffect()' we use ‘fetchData()' function to fetch data from the external world. don’t worry we will see each and every steps in detail. logic of fetching the data is exactly the same that we used to do in javascript. here we are fetching the swiggy’s API.
+
+
+Q) What exactly the CORS policy is?
+ (Cross-Origin Resource Sharing) is a system, consisting of transmitting HTTP headers, that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.
+In simpler terms, CORS (Cross-Origin Resource Sharing) is a security feature implemented by browsers that restricts web pages from making requests to a different origin (domain) than the one from which it was served. Therefore, when trying to call Swiggy's API from localhost, the browser blocks the request due to 
+CORS restrictions.
+
+
+Shimmer UI is a technique that shows placeholder content while data is loading, reducing wait time and keeping users engaged.
+Instead of displaying a generic "loading" message, we'll integrate a <shimmer/> component within our app to provide visual feedback while data is loading. this concept is known as ‘conditional rendering‘.
+
+Q) Why do we need State variable? 
+Many developers have this confusion today we will see that Why with the help of following example:
+to understand this we will introduce on feature in our app is a ‘login/logout’ 
+
+
+Why React.js over Vanilla JavaScript
+Oppose to Vanilla JavaScript, react has a concept called components which combines all HTML, CSS and JavaScript by features instead of separation HTML, CSS, and JavaScript completely. React.js manages updating the DOM or Document Object Model with the component written by us. React is the most popular JavaScript library for building user interfaces. Component-Based Architecture. Declarative UI. Rich Ecosystem- npm packages. Strong Community Support- Online / GitHub
+
+
+
+
     **[⬆ Back to Top](#table-of-contents)**
 
 2.  ### What is the history behind React evolution?
