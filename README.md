@@ -443,6 +443,32 @@ React is a JavaScript library used for building user interfaces (UIs) and single
 React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
 
 
+Q) What is Single Page Application?
+A Single Page Application (SPA) is a type of web application that loads and updates content dynamically without refreshing the entire page. Unlike traditional websites, SPAs use modern technologies to enhance the user experience by minimizing interruptions and providing a smoother interface. Users can interact with the application seamlessly, similar to using desktop software. The main advantage is the elimination of full-page reloads, resulting in a more responsive and engaging web experience. This is achieved by ensuring that the browser obtains all essential HTML, JavaScript, and CSS codes in one request or updates the necessary content based on user actions.
+
+When you click on something in a SPA, it only sends the necessary information to your browser and the browser renders it. This is different from a traditional page load, where the server sends a full page to your browser with every click you make.
+
+Benefits of SPAs
+
+Faster User Experience: SPAs load once, and only fetch the necessary data, reducing page reloads and providing a smoother, more responsive experience.
+Caching for Offline Access: SPAs can implement caching strategies, allowing users to access certain parts of the application even when offline.
+Improved Performance: By minimizing server requests and only updating the required components, SPAs significantly reduce the load on servers, resulting in faster load times and better overall performance.
+Reduced Bandwidth Usage: Since SPAs only fetch the data needed for specific interactions, they minimize the amount of data transferred between the client and server, reducing bandwidth usage and improving efficiency.
+Enhanced Responsiveness: It enable dynamic content updates without requiring full page reloads.
+Seamless User Navigation: SPAs use client-side routing, enabling seamless navigation between sections of the application without the need for full page reloads.
+Cross-Platform Compatibility: SPAs are inherently compatible with various devices and platforms, promoting a consistent user experience across desktops, tablets, and mobile devices.
+Scalability: SPAs support the scalability of web applications by efficiently managing client-server interactions.
+
+Disadvantages of SPAs
+Slower Initial Load: Can be slower initially, affecting users with slower internet.
+SEO Challenges: SEO can be tricky due to heavy reliance on JavaScript.
+Limited Browser Support: Advanced features may not work well on older browsers.
+Security Risks: Vulnerable to security issues like Cross-Site Scripting (XSS).
+Client-Side Resource Intensity: Places a heavy load on the client side, impacting older devices.
+Dependency on JavaScript: Essential functionality may break if users disable JavaScript.
+Browser History Management: Handling navigation dynamically poses challenges with browser history.
+Complex Development: Developing SPAs is more complex, requiring a learning curve.
+
 1.2) What is Library?
 
 Library is a collections of prewritten code snippets that can be used and reused to perform certain tasks. A particular JavaScript library code can be plugged into application code which leads to faster development and fewer vulnerabilities to have errors. Examples: React, jQuery
@@ -514,13 +540,27 @@ Many developers have this confusion today we will see that Why with the help of 
 to understand this we will introduce on feature in our app is a ‘login/logout’ 
 
 
+
 Why React.js over Vanilla JavaScript
 Oppose to Vanilla JavaScript, react has a concept called components which combines all HTML, CSS and JavaScript by features instead of separation HTML, CSS, and JavaScript completely. React.js manages updating the DOM or Document Object Model with the component written by us. React is the most popular JavaScript library for building user interfaces. Component-Based Architecture. Declarative UI. Rich Ecosystem- npm packages. Strong Community Support- Online / GitHub
 
-
-
-
     **[⬆ Back to Top](#table-of-contents)**
+
+
+
+Q) Redux toolkit interview questions : https://www.geeksforgeeks.org/react-redux-interview-questions-and-answers/
+
+
+Q) Axios interview Questions : https://www.naukri.com/code360/library/axios-in-react
+
+
+
+Q)  What is prop drilling and its disadvantages?
+Prop drilling is basically a situation when the same data is being sent at almost every level due to requirements in the final level. The problem with Prop Drilling is that whenever data from the Parent component will be needed, it would have to come from each level, Regardless of the fact that it is not needed there and simply needed in last.
+
+Q) What is custom hooks in React?
+Custom hooks are normal JavaScript functions whose names start with “use” and they may call other hooks. We use custom hooks to maintain the DRY concept that is Don’t Repeat Yourself. It helps us to write a logic once and use it anywhere in the code.
+
 
 2.  ### What is the history behind React evolution?
 
